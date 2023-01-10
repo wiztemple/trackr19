@@ -21,18 +21,15 @@ const Modal = ({
   population,
   continent
 }) => {
-  const current = new Date();
-  const date = `${current.getDate()}/${
-    current.getMonth() + 1
-  }/${current.getFullYear()}`;
+  const date = new Date().toDateString();
 
   return (
-    <div className="bg-gray-700 bg-opacity-60 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0">
-      <div className="relative w-[600px] h-screen ml-auto max-w-3xl bg-white">
+    <div className="transition duration-150 h-screen w-screen ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0">
+      <div className="relative w-[650px] h-screen ml-auto max-w-3xl bg-white shadow-2xl">
         <div className="flex justify-between items-center border-b border-b-slate-200 py-5 px-5">
           <span className="flex items-center gap-2">
             <img
-              className="h-8 w-14 object-cover rounded"
+              className="h-[31px] w-14 object-cover rounded"
               src={countryFlag}
               alt={countryName}
             />
